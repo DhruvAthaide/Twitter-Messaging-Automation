@@ -33,15 +33,11 @@ Then, you need to set the following column name in the Excel File and paste the 
 Column 1: Profile Links
 ```
 
-Then, in the 'Twitter.py' file on Line 12 & 13 Enter your Username/Email ID and Password in between the Quotes for the String:
+Then, create a .env file in your repository folder and enter your credentials in the .env file as these will be the credentials used to log into your twitter account to message the Profiles:
 ```bash
-twitter_username = "Enter Your Username/Email"
-twitter_password = "Enter Your Password"
-```
-
-Then, in the 'Twitter.py' file on Line 14 Enter your Twitter @Username in between the Quotes for the String as it is required when logging in multiple times:
-```bash
-twitter_attherateusername='@Username'
+TWITTER_USERNAME=EnterYourUsername
+TWITTER_PASSWORD=EnterYourPassword
+TWITTER_AT_THERATE_USERNAME=EnterYourAtTheRateUsername
 ```
 
 Then, customize your message which you want to send to the Twitter profile's on Line 92:

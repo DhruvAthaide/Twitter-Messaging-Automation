@@ -7,11 +7,17 @@ from selenium.common.exceptions import NoSuchElementException
 import time
 import pandas as pd
 import random
+import openpyxl
+import os
+from dotenv import load_dotenv
 
-# Twitter credentials
-twitter_username = "Enter Your Username/Email"
-twitter_password = "Enter Your Password"
-twitter_attherateusername='@Username'
+# Load environment variables from .env file
+load_dotenv()
+
+# Access the variables
+twitter_username = os.getenv("TWITTER_USERNAME")
+twitter_password = os.getenv("TWITTER_PASSWORD")
+twitter_attherateusername = os.getenv("TWITTER_AT_THERATE_USERNAME")
 
 # XLSX File Reading
 excel_file_path = pd.read_excel("profile_links.xlsx", header=None, names=['Profile Links'])
@@ -116,12 +122,14 @@ for profile_link in profile_links:
 
         time.sleep(2)
         # XPath for the message input field
-        message_input_xpath = '/html/body/div[1]/div/div/div[2]/main/div/div/div/div[2]/div/div/aside/div[2]/div[2]/div/div/div/div/div/label/div[1]/div/div/div/div/div/div[2]'
+        message_input_xpath = '//*[@id="react-root"]/div/div/div[2]/main/div/div/div/section[2]/div/div/div[2]/div/div/aside/div[2]/div[2]/div/div/div/div/div/label/div[1]/div/div/div/div/div/div[2]/div'
 
         # Wait for the messaging popup to load
         WebDriverWait(driver, 10).until(
             EC.presence_of_element_located((By.XPATH, message_input_xpath))
         )
+
+        time.sleep(4)
 
         # Find the message input field using XPath
         msg = driver.find_element(By.XPATH, message_input_xpath)
