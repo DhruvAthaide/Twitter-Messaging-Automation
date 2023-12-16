@@ -19,8 +19,8 @@ twitter_username = os.getenv("TWITTER_USERNAME")
 twitter_password = os.getenv("TWITTER_PASSWORD")
 twitter_attherateusername = os.getenv("TWITTER_AT_THERATE_USERNAME")
 
-# XLSX File Reading
-excel_file_path = pd.read_excel("profile_links.xlsx", header=None, names=['Profile Links'])
+# CSV File Reading
+excel_file_path = pd.read_csv("profile_links.csv", header=None, names=['Profile Links'])
 profile_links = excel_file_path['Profile Links'].tolist()
 
 # Configuring the Chrome driver and Handling Notification Alert

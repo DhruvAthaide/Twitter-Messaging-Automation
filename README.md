@@ -1,7 +1,7 @@
 
 # Twitter Automated Messaging Tool
 
-I have created a Twitter Automated Messaging Tool using Python to send a private message to the profile links you provide!
+I have created a Twitter Automated Messaging Tool using Python to send a private message to the profile links you provide! This script uses Selenium browser to execute the commands.
 
 
 ## Installation
@@ -23,9 +23,9 @@ cd Twitter-Messaging-Automation
 pip install -r requirements.txt
 ```
 
-Then, you need to create a XLSX File or Excel File and name it:
+Then, you need to create a CSV File and name it:
 ```bash
-Name: profile_links.xlsx
+Name: profile_links.csv
 ```
 
 Then, you need to set the following column name in the Excel File and paste the Twitter profile's link you want to message in this column:
