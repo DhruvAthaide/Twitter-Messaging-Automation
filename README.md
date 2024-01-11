@@ -33,7 +33,7 @@ Then, you need to set the following column name in the Excel File and paste the 
 Column 1: Profile Links
 ```
 
-Then, create a .env file in your repository folder and enter your credentials in the .env file as these will be the credentials used to log into your twitter account to message the Profiles:Hello
+Then, create a .env file in your repository folder and enter your credentials in the .env file as these will be the credentials used to log into your twitter account to message the Profiles:
 ```bash
 TWITTER_USERNAME=EnterYourUsername
 TWITTER_PASSWORD=EnterYourPassword
